@@ -13,7 +13,7 @@ after_success:
   - docker build -t lukicalk/multi-ngnix  ./ngnix
   - docker build -t lukicalk/multi-server ./server
   - docker build -t lukicalk/multi-worker ./worker
-# Log in to the docker CLI
+# Log in to the docker CLI, second attempt
   - echo '$DOCKER_PASSWORD' | docker login -u "$DOCKER_ID" --password-stdin
 
 # Take those images and push them to docker hub
