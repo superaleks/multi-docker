@@ -27,14 +27,14 @@
       "image":"lukicalk/multi-ngnix",
       "hostname": "nginx",
       "essential": true,
-      "memory": 128,
       "portMappings": [
         {
         "hostPort": 80,
         "containerPort":80
         }
-      ]
+      ],
+      "links": ["clients", "server"],
+      "memory": 128
     }
-  ],
-  "links": ["clients", "server"]
+  ]
 }
